@@ -8,7 +8,7 @@ namespace Fxm.Utils
     /// <summary>
     /// Json转换类，使用了第三方库：Newtonsoft.Json的 
     /// </summary>
-    public class JsonHelper
+    public class JsonUtil
     {
         /// <summary>
         ///  将对象转换为Json字符串
