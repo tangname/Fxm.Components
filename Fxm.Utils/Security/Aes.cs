@@ -25,6 +25,9 @@ namespace Fxm.Utils.Security
         /// <returns></returns>
         public static string Encrypt(string data, string key, byte[] iv)
         {
+            //注册字符集
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
             if (string.IsNullOrEmpty(data)) return null;
 
             byte[] toEncryptArray = Encoding.GetEncoding("GB2312").GetBytes(data);
@@ -52,6 +55,9 @@ namespace Fxm.Utils.Security
         /// <returns></returns>
         public static string Decrypt(string data, string key, byte[] iv)
         {
+            //注册字符集
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+
             if (string.IsNullOrEmpty(data)) return null;
 
             byte[] toEncryptArray = Convert.FromBase64String(data);
